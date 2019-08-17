@@ -1,15 +1,14 @@
 package com.tedu.controller;
 
-import java.io.InputStream;
-import java.util.List;
-
+import com.tedu.dao.DoorMapper;
+import com.tedu.pojo.Door;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.tedu.dao.DoorMapper;
-import com.tedu.pojo.Door;
+import java.io.InputStream;
+import java.util.List;
 
 /** 测试mybatis开发环境 */
 public class TestMybatis {

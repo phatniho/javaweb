@@ -1,14 +1,13 @@
 package com.tedu.controller;
 
-import java.text.SimpleDateFormat;
-
+import com.tedu.pojo.Emp;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tedu.pojo.Emp;
+import java.text.SimpleDateFormat;
 
 @Controller
 public class MySpringMVC {

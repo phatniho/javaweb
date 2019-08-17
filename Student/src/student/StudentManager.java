@@ -1,13 +1,12 @@
 package student;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import utils.JdbcUtils;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
-
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-
-import utils.JdbcUtils;
 
 public class StudentManager {
 	public static void main(String[] args) {

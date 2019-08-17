@@ -1,18 +1,13 @@
 package com.tedu.test;
 
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-
+import com.tedu.pojo.*;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.tedu.pojo.*;
+import java.io.InputStream;
+import java.util.*;
 
 public class Test1 {
 	private static SqlSessionFactory factory;

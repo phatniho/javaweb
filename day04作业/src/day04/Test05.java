@@ -1,13 +1,12 @@
 package day04;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.tedu.util.JdbcUtils;
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import org.junit.Test;
-
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.tedu.util.JdbcUtils;
 
 public class Test05 {
 	@Test

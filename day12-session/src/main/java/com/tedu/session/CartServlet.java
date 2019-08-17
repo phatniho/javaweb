@@ -1,13 +1,9 @@
 package com.tedu.session;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /*
  * 负责将商品加入垢污车

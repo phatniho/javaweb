@@ -1,12 +1,11 @@
 package com.tedu.login;
 
+import com.tedu.util.JdbcUtils;
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import org.junit.Test;
-
-import com.tedu.util.JdbcUtils;
 
 /*
  * PreparedStatement对象的使用

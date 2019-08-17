@@ -1,10 +1,11 @@
 package com.tedu.jdbc;
 
+import com.tedu.util.JdbcUtils;
+import org.junit.jupiter.api.Test;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import org.junit.jupiter.api.Test;
-import com.tedu.util.JdbcUtils;
 
 /**
  * JDBC增删改查(CRUD) Create 增加 Retrieve 查询 Update 修改 Delete 删除

@@ -1,8 +1,8 @@
 package com.tedu.dao;
 
-import java.util.List;
-
 import com.tedu.pojo.Goods;
+
+import java.util.List;
 
 public interface GoodsMapper {
 

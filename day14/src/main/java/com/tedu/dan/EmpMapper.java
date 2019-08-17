@@ -1,8 +1,8 @@
 package com.tedu.dan;
 
-import java.util.Map;
-
 import com.tedu.pojo.Emp;
+
+import java.util.Map;
 
 public interface EmpMapper {
 	public int addUser(Emp emp);

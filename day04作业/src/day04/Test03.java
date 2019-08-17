@@ -1,12 +1,11 @@
 package day04;
 
+import com.tedu.util.JdbcUtils;
+import org.junit.jupiter.api.Test;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-import org.junit.jupiter.api.Test;
-
-import com.tedu.util.JdbcUtils;
 
 public class Test03 {
 	@Test

@@ -1,11 +1,11 @@
 package com.tedu.req;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 /**
  * 访问RequestDemo2，负责查询当前用户的个人信息
  * 将用户的个人信息转向JSP，由JSP负责做响应

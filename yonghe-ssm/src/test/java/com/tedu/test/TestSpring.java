@@ -1,9 +1,8 @@
 package com.tedu.test;
 
+import com.tedu.pojo.Door;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.tedu.pojo.Door;
 
 public class TestSpring {
 	@Test

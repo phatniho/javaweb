@@ -1,8 +1,8 @@
 package com.tedu.dao;
 
-import java.util.List;
-
 import com.tedu.pojo.Student;
+
+import java.util.List;
 
 public interface StudentMapper {
 	

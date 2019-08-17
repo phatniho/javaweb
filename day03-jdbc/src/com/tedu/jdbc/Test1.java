@@ -1,10 +1,6 @@
 package com.tedu.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 // 1.注册数据库驱动
 // 把绝对路径下的指定类加载到内存中

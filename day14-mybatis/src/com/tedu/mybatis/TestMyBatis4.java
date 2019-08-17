@@ -1,20 +1,16 @@
 package com.tedu.mybatis;
 
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-
+import com.tedu.dao.EmpMapper;
+import com.tedu.pojo.Emp;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
-import com.tedu.dao.EmpMapper;
-import com.tedu.pojo.Emp;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.List;
 
 /*
  * mybatis的Mapper接口开发

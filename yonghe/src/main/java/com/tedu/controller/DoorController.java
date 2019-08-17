@@ -1,15 +1,13 @@
 package com.tedu.controller;
 
-import java.util.List;
-
+import com.tedu.pojo.Door;
+import com.tedu.service.DoorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tedu.pojo.Door;
-import com.tedu.service.DoorService;
+import java.util.List;
 
 /* spring会扫描controller包下的所有类
  * 将类上带有@Controller注解的类, 自动注册到

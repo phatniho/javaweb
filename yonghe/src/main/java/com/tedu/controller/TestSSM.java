@@ -1,13 +1,12 @@
 package com.tedu.controller;
 
-import java.util.List;
-
+import com.tedu.dao.DoorMapper;
+import com.tedu.pojo.Door;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tedu.dao.DoorMapper;
-import com.tedu.pojo.Door;
+import java.util.List;
 
 /** 测试SSM整合后的开发环境 */
 @Controller 

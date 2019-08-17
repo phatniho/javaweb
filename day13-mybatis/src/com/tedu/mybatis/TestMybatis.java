@@ -1,15 +1,14 @@
 package com.tedu.mybatis;
 
-import java.io.InputStream;
-import java.util.List;
-
+import com.tedu.pojo.Emp;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
-import com.tedu.pojo.Emp;
+import java.io.InputStream;
+import java.util.List;
 
 /*
  * 通过mybatis查询yonghedb库中Emp表中的所有数据

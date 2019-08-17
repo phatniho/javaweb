@@ -1,10 +1,6 @@
 package com.tedu.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * JDBC的快速入门程序 查询account表中的所有记录,并输出到控制台

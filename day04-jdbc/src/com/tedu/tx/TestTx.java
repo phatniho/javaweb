@@ -1,11 +1,11 @@
 package com.tedu.tx;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.tedu.util.JdbcUtils;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.tedu.util.JdbcUtils;
 
 public class TestTx {
 	public static void main(String[] args) throws Exception {

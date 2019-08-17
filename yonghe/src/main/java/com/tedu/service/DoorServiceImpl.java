@@ -1,12 +1,11 @@
 package com.tedu.service;
 
-import java.util.List;
-
+import com.tedu.dao.DoorMapper;
+import com.tedu.pojo.Door;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tedu.dao.DoorMapper;
-import com.tedu.pojo.Door;
+import java.util.List;
 
 /* spring会扫描service包下的所有类
  * 将类上带有@Service注解的类, 自动注册到

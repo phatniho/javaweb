@@ -1,11 +1,11 @@
 package com.tedu.login;
 
+import com.tedu.util.JdbcUtils;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.util.Scanner;
 import java.sql.Statement;
-
-import com.tedu.util.JdbcUtils;
+import java.util.Scanner;
 
 /*
  * 模拟用户登录案例

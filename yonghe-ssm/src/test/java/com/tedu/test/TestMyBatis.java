@@ -1,16 +1,15 @@
 package com.tedu.test;
 
-import java.io.InputStream;
-import java.util.Iterator;
-import java.util.List;
-
+import com.tedu.dao.DoorMapper;
+import com.tedu.pojo.Door;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.tedu.dao.DoorMapper;
-import com.tedu.pojo.Door;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.List;
 
 public class TestMyBatis {
 	// 测试mybatis的开发环境

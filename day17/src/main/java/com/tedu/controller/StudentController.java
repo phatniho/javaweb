@@ -1,10 +1,9 @@
 package com.tedu.controller;
 
+import com.tedu.pojo.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.tedu.pojo.Student;
 
 @Controller
 public class StudentController {

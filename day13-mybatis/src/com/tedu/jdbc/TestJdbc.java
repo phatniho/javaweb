@@ -1,15 +1,11 @@
 package com.tedu.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.tedu.pojo.Emp;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import com.tedu.pojo.Emp;
 
 /*
  * 通过JDBC查询yonghedb库中Emp表中的所有数据

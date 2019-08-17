@@ -1,10 +1,9 @@
 package com.tedu;
 
-import org.junit.Test;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import com.tedu.dao.Dao;
 import com.tedu.pojo.User;
+import org.junit.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpring {
 	// 1.加载applicationContext.xml配置文件
