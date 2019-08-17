@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+	<style>
+		table,td{
+			border:2px solid #f00;/*设置边框*/
+			border-collapse:collapse;/*设置边框合并*/
+		}
+		td{
+			padding:5px;/*设置单元格边框和内容的距离*/
+		}
+		table{
+			/*width:30%;设置元素的宽度*/
+			/*设置表格左右外边距自适应,让表格居中*/
+			margin-left:auto;
+			margin-right:auto;
+			/*设置背景颜色*/
+			background: lightgrey;
+		}
+		h1{
+			text-align: center;/*设置元素内文本的水平排列方式*/
+		}
+		#last-td{/*选中id值为last-td的元素*/
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>登录</h1>
+	<form action="Login" method="post">
+		<table>
+			<tr>
+				<td>用户名:</td>
+				<td>
+					<input type="text" name="user"/>
+				</td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td>
+					<input type="password" name="pwd"/>
+				</td>
+			</tr>
+			<tr>
+				<td id="last-td" colspan="2">
+					<input type="submit" value="登录"/>
+					<input type="reset" value="重置"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace一般指定为当前文件的所在包路径+文件名 将来在程序中通过[ namespace + id ]定位到执行哪一条SQL语句] 
+	并且namespace、id的值不能重复 -->
+<mapper namespace="com.tedu.pojo.PojoMapper">
+	<!-- 通过select、insert、update、delete标签声明要执行的SQL -->
+	<!-- 查询所有 -->
+	<select id="findAllStudent" resultType="com.tedu.pojo.Student">
+		select * from student;
+	</select>
+	<select id="findAllTeacher" resultType="com.tedu.pojo.Teacher">
+		select * from teacher;
+	</select>
+	<select id="findAllClasses" resultType="com.tedu.pojo.Classes">
+		select * from class;
+	</select>
+	<select id="findAllCourse" resultType="com.tedu.pojo.Course">
+		select * from course;
+	</select>
+	<select id="findAllScore" resultType="com.tedu.pojo.Score">
+		select * from score;
+	</select>
+	<!-- 查询指定 -->
+	<!-- 查询指定学生 -->
+	<select id="findStuById" resultType="com.tedu.pojo.Student">
+		select * from student where
+		sid = #{sid};
+	</select>
+	<select id="findStuByName" resultType="com.tedu.pojo.Student">
+		select * from student
+		where sname = #{sname};
+	</select>
+	<select id="findStuByGender" resultType="com.tedu.pojo.Student">
+		select * from student
+		where gender = #{gender};
+	</select>
+	<select id="findStuByClass" resultType="com.tedu.pojo.Student">
+		select * from student
+		where class_id = #{class_id};
+	</select>
+	<!-- 查询指定教师 -->
+	<select id="findTeaById" resultType="com.tedu.pojo.Teacher">
+		select * from teacher where
+		tid = #{tid};
+	</select>
+	<select id="findTeaByName" resultType="com.tedu.pojo.Teacher">
+		select * from teacher
+		where tname = #{tname};
+	</select>
+	<select id="findTeaByGender" resultType="com.tedu.pojo.Teacher">
+		select * from teacher
+		where tgender = #{tgender};
+	</select>
+	<!-- 查找指定班级 -->
+	<select id="findClaById" resultType="com.tedu.pojo.Classes">
+		select * from class where
+		cid = #{cid};
+	</select>
+	<select id="findClaByName" resultType="com.tedu.pojo.Classes">
+		select * from class where
+		caption = #{caption};
+	</select>
+	<!-- 查询指定课程 -->
+	<select id="findCouById" resultType="com.tedu.pojo.Course">
+		select * from course where
+		cid = #{cid};
+	</select>
+	<select id="findCouByName" resultType="com.tedu.pojo.Course">
+		select * from course where
+		cname = #{cname};
+	</select>
+	<select id="findCouByTeach_id" resultType="com.tedu.pojo.Course">
+		select * from course
+		where teach_id = #{teach_id};
+	</select>
+	<!-- 查询指定成绩 -->
+	<select id="findScoBySid" resultType="com.tedu.pojo.Score">
+		select * from score where
+		sid = #{sid};
+	</select>
+	<select id="findScoByStuid" resultType="com.tedu.pojo.Score">
+		select * from score where
+		student_id = #{stuid};
+	</select>
+	<select id="findScoByCouid" resultType="com.tedu.pojo.Score">
+		select * from score where
+		corse_id = #{couid};
+	</select>
+	<select id="findScoByNumber" resultType="com.tedu.pojo.Score">
+		select * from score
+		where number between #{number1} and #{number2};
+	</select>
+	<!-- 添加信息 -->
+	<!-- 添加学生 -->
+	<update id="addStu">
+		insert into student
+		values(null,#{sname},#{gender},#{class_id});
+	</update>
+	<!-- 添加教师 -->
+	<update id="addTea">
+		insert into teacher
+		values(null,#{tname},#{tgender});
+	</update>
+	<!-- 添加班级 -->
+	<update id="addCla">
+		insert into class
+		values(null,#{name});
+	</update>
+	<!-- 添加课程 -->
+	<update id="addCou">
+		insert into course
+		values(null,#{name});
+	</update>
+	<!-- 添加成绩 -->
+	<update id="addSco">
+		insert into score
+		values(null,#{name});
+	</update>
+	<!-- 修改信息 -->
+	<!-- 修改学生信息 -->
+	<update id="updateStu">
+		update student set
+		sname=#{sname},gender=#{gender},class_id=#{class_id} where sid=#{sid};
+	</update>
+	<!-- 修改教师信息 -->
+	<update id="updateTea">
+		update teacher set tname=#{tname},tgender=#{tgender}
+		where tid=#{tid};
+	</update>
+	<!-- 修改班级信息 -->
+	<update id="updateCla">
+		update class set caption=#{caption} where cid=#{cid};
+	</update>
+	<!-- 修改课程信息 -->
+	<update id="updateCou">
+		update course set cname=#{cname},teach_id=#{teach_id}
+		where cid=#{cid};
+	</update>
+	<!-- 修改成绩信息 -->
+	<update id="updateSco">
+		update score set
+		student_id=#{student_id},corse_id=#{corse_id},number=#{number} where
+		sid=#{sid};
+	</update>
+	<!-- 删除信息 -->
+	<!-- 删除学生信息 -->
+	<update id="deleteStuBy">
+		delete from student where ${name1} = #{name2};
+	</update>
+	<!-- 删除教师信息 -->
+	<update id="deleteTeaBy">
+		delete from teacher where ${name1} = #{name2};
+	</update>
+	<!-- 删除班级信息 -->
+	<update id="deleteClaBy">
+		delete from class where ${name1} = #{name2};
+	</update>
+	<!-- 删除课程信息 -->
+	<update id="deleteCouBy">
+		delete from course where ${name1} = #{name2};
+	</update>
+	<!-- 删除成绩信息 -->
+	<update id="deleteScoBy">
+		delete from score where ${name1} = #{name2};
+	</update>
+</mapper>

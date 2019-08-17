@@ -1,0 +1,14 @@
+package com.tedu.service;
+
+import java.util.List;
+
+import com.tedu.pojo.Goods;
+
+public interface GoodsService {
+
+	List<Goods> findAll();
+
+	void addGoods(Goods goods);
+
+
+}

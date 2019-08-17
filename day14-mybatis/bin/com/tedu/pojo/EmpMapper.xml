@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace一般指定为当前文件的所在包路径+文件名（将来是接口名） -->
+<!-- 在程序中通过[ namespace + id ]定位到执行哪一条SQL语句 -->
+<mapper namespace="com.tedu.dao.EmpMapper">
+	<!-- 可重复执行片段 -->
+	<sql id="empcols">
+		id,name,job,salary
+	</sql>
+
+	<!-- 1.查询所有员工信息 -->
+	<!-- resultType指定的是返回值的类型,或者返回值是集合,那么resultType就是指定集合中的泛型 -->
+	<select id="findAll" resultType="com.tedu.pojo.Emp">
+		select
+		<include refid="empcols" />
+		from
+		emp;
+	</select>
+	<!-- 2.修改员工信息 -->
+	<!-- 将id为1的员工的job改成搞基java开发工程师,salary改为30000 -->
+	<update id="updateById">
+		update emp set job = '搞基java开发工程师',salary = 30000
+		where id = 1;
+	</update>
+	<!-- 3.添加员工 -->
+	<update id="addEmp">
+		insert into emp
+		values(null,#{name},#{job},#{salary});
+	</update>
+	<!-- 4.修改员工 -->
+	<update id="update">
+		update emp set
+		name=#{name},job=#{job},salary=#{salary} where id=#{id};
+	</update>
+	<!-- 5.查询员工信息 -->
+	<select id="findByName" resultType="com.tedu.pojo.Emp">
+		select
+		<include refid="empcols" />
+		from emp where
+		name=#{name};
+	</select>
+	<!-- 6.查询多个员工信息 -->
+	<select id="findByJob" resultType="com.tedu.pojo.Emp">
+		select
+		<include refid="empcols" />
+		from emp where
+		job=#{job};
+	</select>
+	<!-- 7.根据id删除员工 -->
+	<update id="deleteById">
+		delete from emp where id=#{id};
+	</update>
+	<!-- 8.查询显示指定列信息 -->
+	<select id="findAny" resultType="com.tedu.pojo.Emp">
+		select ${cols} from emp;
+	</select>
+	<!-- 模糊查询 -->
+	<select id="findAny2" resultType="com.tedu.pojo.Emp">
+		select
+		<include refid="empcols" />
+		from emp where name
+		like '%${name}%';
+	</select>
+	<!-- 9.根据特定条件进行模糊查询 -->
+	<select id="findAll4" resultType="com.tedu.pojo.Emp">
+		select
+		<include refid="empcols" />
+		from emp
+		<if test="name != null">
+			where name like '%${name}%';
+		</if>
+	</select>
+	<!-- 10.特定查询 -->
+	<select id="findAll5" resultType="com.tedu.pojo.Emp">
+		select
+		<include refid="empcols" />
+		from emp
+		<where>
+			<if test="minSal != null">
+				salary > #{minSal}
+			</if>
+			<if test="maxSal != null">
+				and salary <![CDATA[ < ]]>
+				#{maxSal}
+			</if>
+		</where>
+	</select>
+	<!-- 11. -->
+	<select id="updateById3">
+		update emp
+		<set>
+			<if test="name != null">
+				name=#{name},
+			</if>
+			<if test="job != null">
+				job=#{job},
+			</if>
+			<if test="salary != null">
+				salary=#{salary}
+			</if>
+		</set>
+		where id=#{id};
+	</select>
+	<!-- 12.删除多条记录 -->
+	<select id="deleteAll">
+		delete from emp where id in
+		<foreach collection="array" open="(" close=")" item="id"
+			separator=",">
+			#{id}
+		</foreach>
+	</select>
+</mapper>

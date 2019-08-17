@@ -1,0 +1,6 @@
+1558403331632	Extract local variable 'ac'
+1558405366948	Extract local variable 'ac'
+1558406056632	Copy compilation unit
+1558406426664	Extract local variable 'clazz'
+1558406454860	Extract local variable 'user'
+1558409900304	Encapsulate field 'info'

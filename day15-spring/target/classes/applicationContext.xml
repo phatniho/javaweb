@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<!-- 将User对象的创建交给spring容器 -->
+	<!-- singleton:单实例; -->
+	<!-- prototype:多实例; -->
+	<bean id="user" scope="prototype" class="com.tedu.pojo.User">
+		<!-- 通过构造函数初始化对象变量值 -->
+		<constructor-arg name="name" value="马云" />
+		<constructor-arg name="age" value="35" />
+		<constructor-arg name="info" ref="userInfo" />
+		<!-- 通过set方法设置对象变量值 -->
+		<!-- <property name="name" value="韩少云" /> -->
+		<!-- <property name="age" value="30" /> -->
+		<!-- <property name="info" ref="userInfo" /> -->
+	</bean>
+	<!-- 将UserInfo对象的创建交给spring容器 -->
+	<bean id="userInfo" class="com.tedu.pojo.UserInfo"></bean>
+	<!-- 将MySQLDao对象的创建交给spring容器(通过修改配置文件来创建不同的对象) -->
+	<bean id="dao" class="com.tedu.dao.OracleDao"></bean>
+
+</beans>

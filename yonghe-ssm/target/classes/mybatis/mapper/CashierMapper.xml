@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 门店表的映射文件 namespace值为对应接口的全路径 -->
+<mapper namespace="com.tedu.dao.CashierMapper">
+	<sql id="cols">
+		door_id doorId,
+		c_id cId,
+		c_name cName,
+		c_pwd cPwd
+	</sql>
+	<select id="findAll" resultType="com.tedu.pojo.Cashier">
+		select
+		<include refid="cols" />
+		from cashier
+	</select>
+	<update id="addCashier">
+		insert into cashier values(
+		#{doorId},
+		null,
+		#{cName},
+		#{cPwd}
+		);
+	</update>
+
+	<select id="loginCashier" resultType="com.tedu.pojo.Cashier">
+		select
+		<include refid="cols" />
+		from cashier
+		where c_name=#{cName} and c_pwd=#{cPwd}
+	</select>
+
+	<update id="deleteById">
+		delete from cashier where c_id=#{cId}
+	</update>
+
+	<select id="findById" resultType="com.tedu.pojo.Cashier">
+		select
+		<include refid="cols" />
+		from cashier where c_id=#{id}
+	</select>
+
+	<update id="updateById">
+		update cashier set
+		door_id=#{doorId},
+		c_name=#{cName},
+		c_pwd=#{cPwd}
+		where c_id=#{cId}
+	</update>
+</mapper>

@@ -1,0 +1,16 @@
+1558496432420	Delete element
+1558506076710	Extract local variable 'ca'
+1558506441876	Rename local variable 'ca'
+1558510048287	Extract local variable 'factory'
+1558510061624	Extract local variable 'session'
+1558510120582	Extract local variable 'list'
+1558510992359	Extract local variable 'mapper'
+1558512996300	Copy compilation unit
+1558513389919	Copy file
+1558513881022	Extract local variable 'list'
+1558515808416	Copy file
+1558516129357	Copy compilation unit
+1558523707367	Copy files
+1558575860101	Extract local variable 'list'
+1558576421700	Extract local variable 'list'
+1558601342569	Extract local variable 'list'

@@ -1,0 +1,26 @@
+1556523268497	Rename resource 'jar'
+1556524406784	Extract local variable 'con'
+1556525103502	Extract local variable 'stat'
+1556525606306	Extract local variable 'rs'
+1556526160014	Extract local variable 'name'
+1556527831218	Copy compilation unit
+1556537415592	Extract local variable 'dr'
+1556537665269	Extract local variable 'conn'
+1556537725499	Extract local variable 'cs'
+1556537798309	Extract local variable 'eq'
+1556540124666	Copy compilation unit
+1556540321917	Extract local variable 'conn'
+1556540353480	Extract local variable 'stat'
+1556540516193	Extract local variable 'ex'
+1556584676567	Extract local variable 'conn'
+1556584769721	Extract local variable 'stat'
+1556584945306	Extract local variable 'ex'
+1556587513346	Extract method 'close'
+1556592094816	Rename local variable 're'
+1556592393931	Extract method 'start'
+1556604123070	Extract local variable 'ps'
+1556606545382	Copy compilation unit
+1556607563482	Rename local variable 's'
+1556614363381	Copy folder
+1556614453704	Copy package
+1556614703968	Copy compilation unit

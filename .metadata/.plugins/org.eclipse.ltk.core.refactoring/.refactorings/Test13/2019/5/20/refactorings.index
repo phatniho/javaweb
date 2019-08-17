@@ -1,0 +1,7 @@
+1558143622824	Extract local variable 'in'
+1558143992556	Extract local variable 'list'
+1558144246468	Rename type 'Class'
+1558146095556	Rename local variable 'i'
+1558148694248	Extract local variable 'list'
+1558162029753	Extract local variable 'i'
+1558166241668	Rename local variable 'name'
